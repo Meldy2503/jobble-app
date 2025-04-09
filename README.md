@@ -62,13 +62,13 @@ Ensuring an inclusive experience for all users is a core principle of this proje
 
 
 ## Live Demo  
-🌐 Check it out here: https://jobble-jobs.vercel.app
+🌐 Check it out here: https://jobble-job.vercel.app/
 
 
 ## Installation & Setup  
 1. **Clone the repository**:  
    ```sh
-   git clone https://github.com/Meldy2503/Jobble.git
+   git clone https://github.com/Meldy2503/jobble-app
    cd Jobble
    ```  
 2. **Install dependencies**:  
