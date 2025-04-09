@@ -94,7 +94,7 @@ const ExclusiveOffers = ({ jobs }: ExclusiveOffersProps) => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <Button onClick={showLessJobs} bg="#E0E0E0" color="#757575">
+            <Button onClick={showLessJobs} bg="#E0E0E0" color="#333" hover='#d0d0d0'>
               Show Less
             </Button>
           </motion.div>
