@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.animate-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.animate {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  min-width: 250%;
+  animation: marquee 25s linear infinite;
+  
+  color: #283244;
+  color: #338ded;
+}
+
+.animate:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.description h3,
+.description h2,
+.description h1 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.description div {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.description p {
+  padding-bottom: 10px !important;
+}
+
+.description strong {
+  padding-bottom: 10px !important;
+}
+
+
+.jobCard {
+  width: 31.5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .jobCard {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .jobCard {
+    width: 100%;
+  }
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
