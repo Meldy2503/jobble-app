@@ -12,9 +12,17 @@ import {
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
-function JobSearch() {
+interface JobSearchProps {
+  onSearch: (position: string, location: string) => void;
+}
+
+function JobSearch({ onSearch }: JobSearchProps) {
   const [position, setPosition] = useState("");
   const [location, setLocation] = useState("");
+
+  const handleSearch = () => {
+    onSearch(position, location); // Pass search inputs to the parent
+  };
 
   return (
     <Box>
@@ -49,7 +57,7 @@ function JobSearch() {
             />
           </Field.Root>
           <Box borderLeft={"1px solid #B8BDBB"} h={"2rem"} />
-          <Field.Root invalid>
+          <Field.Root>
             <Input
               border={"none"}
               placeholder="Location"
@@ -60,19 +68,23 @@ function JobSearch() {
             />
           </Field.Root>
           <IconButton
-            type="submit"
+            type="button"
             bg={"#006adc"}
             color={"white"}
             rounded={"full"}
             px={4}
             py="1.5rem"
             aria-label="Search"
+            onClick={handleSearch} // Trigger search on click
           >
-            <FiSearch />
+            <Box cursor="pointer">
+              <FiSearch />
+            </Box>
           </IconButton>
         </HStack>
       </Flex>
     </Box>
   );
 }
+
 export default JobSearch;
